@@ -18,8 +18,8 @@ body{
 
 .container-left{
     width: 40%;
+    height: 450px;
     margin-right: 0;
-    background-color:bisque;
     display: flex;
     justify-content: center;
 }
@@ -36,12 +36,13 @@ body{
     height: 200px;
     align-self: center;
     animation-name: fall;
-    animation-duration: 3s;
+    animation-duration: 2s;
 
 }
 /* container right*/
 .container-right{
     width: 60%;
+    height: 450px;
     margin-left: 0;
     display: grid;
     text-align: center;
@@ -116,5 +117,33 @@ body{
 
 @keyframes fall{
 0%{top:0%}
-100%{top: 296px;}
+100%{top: 275px;}
 }
+
+@media (max-width: 500px){
+    body{
+    background-image: none;
+    }
+    .container-main{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-right{
+        width: 100%;
+        margin: 0;    
+    }
+    .container-left{
+        width: 100%;
+        margin:0;
+    }
+    .container-left img:nth-child(2){
+        animation-name: fall2;
+        animation-duration: 3s;
+    }
+
+}
+
+@keyframes fall2{
+    0%{top:0%}
+    100%{top: 75px;}
+    }
